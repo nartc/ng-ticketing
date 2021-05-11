@@ -1,5 +1,6 @@
 module.exports = {
-  mode: 'jit',
+  // a hack to get intellisense
+  mode: process.env.TAILWIND_MODE ? 'jit' : 'aot',
   purge: ['./src/**/*.{html,scss,ts}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -9,4 +10,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
