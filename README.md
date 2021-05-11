@@ -2,26 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0-rc.3.
 
-## Development server
+This project showcases a simple Ticketing system where user can filter, add, assign, and complete tickets
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## State Management
 
-## Code scaffolding
+This project uses [Component Store](https://ngrx.io/guide/component-store) as a lightweight state management system.
+**Ticketing** has two pages: Ticket List and Ticket Detail. Each page has their own **Component Store** to manage the
+state of that page as well as handling side effects that the page might have.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## UI
 
-## Build
+**Ticketing** uses [TailwindCSS](https://tailwindcss.com) for quick prototyping with utility classes. Some styles were
+referenced from [TailwindCSS Components](https://tailwindcomponents.com/) which is a free repository of
+community-submitted components.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Timeline
 
-## Running unit tests
+Time spent on this project is kept track with [Waka Time](https://wakatime.com).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![waka](./waka.png)
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The bulk of the time is spent on the pages (List and Detail), and their **Component Store**.
