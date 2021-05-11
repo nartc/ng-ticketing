@@ -37,5 +37,14 @@
     "prettier": "2.3.0",
     "tailwindcss": "2.1.2",
     "typescript": "~4.2.3"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "printWidth": 80,
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "trailingComma": "all"
   }
 }
