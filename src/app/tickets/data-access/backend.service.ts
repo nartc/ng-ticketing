@@ -20,11 +20,15 @@ export type Ticket = {
   completed: boolean;
 };
 
+export type TicketWithUser = {
+  assignee?: User | null;
+} & Ticket;
+
 function randomDelay() {
   return Math.random() * 1000;
 }
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class BackendService {
   storedTickets: Ticket[] = [
     {
@@ -83,11 +87,11 @@ export class BackendService {
     return of(newTicket).pipe(delay(randomDelay()));
   }
 
-  assign(ticketId: number, userId: number) {
+  assign(ticketId: number, userId: number): Observable<Ticket> {
     return this.update(ticketId, { assigneeId: userId });
   }
 
-  complete(ticketId: number, completed: boolean) {
+  complete(ticketId: number, completed: boolean): Observable<Ticket> {
     return this.update(ticketId, { completed });
   }
 
